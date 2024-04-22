@@ -9,7 +9,7 @@
 
 - name: Download Runner
   ansible.builtin.unarchive:
-    src: https://github.com/actions/runner/releases/download/v2.315.0/actions-runner-osx-x64-2.315.0.tar.gz
+    src: https://github.com/actions/runner/releases/download/v2.315.0/actions-runner-linux-x64-2.315.0.tar.gz
     dest: /home/ec2-user/github-runner
     remote_src: yes
   become_user: ec2-user
