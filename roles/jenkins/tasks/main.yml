@@ -17,6 +17,7 @@
 - name: Create init directory
   ansible.builtin.file:
     path: /var/lib/jenkins/init.groovy.d
+    state: directory
 
 - name: Copy init scripts
   ansible.builtin.template:
