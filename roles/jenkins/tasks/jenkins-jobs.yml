@@ -11,15 +11,19 @@
     - frontend
     - backend
 
-- name: Create Jobs
-  community.general.jenkins_job:
-    config: /tmp/{{item}}.xml
-    name: "{{item}}"
-    password: "{{secrets.jenkins_password}}"
-    url: http://jenkins-internal.rdevops6a.online:8080
-    user: "{{secrets.jenkins_user}}"
-  loop:
-    - frontend
-    - backend
+- name: Print
+  debug:
+    msg: "User: {{secrets.jenkins_user}}, Password: {{secrets.jenkins_password}}"
+
+# - name: Create Jobs
+#   community.general.jenkins_job:
+#     config: /tmp/{{item}}.xml
+#     name: "{{item}}"
+#     password: "{{secrets.jenkins_password}}"
+#     url: http://jenkins-internal.rdevops6a.online:8080
+#     user: "{{secrets.jenkins_user}}"
+#   loop:
+#     - frontend
+#     - backend
 
 
